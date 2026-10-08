@@ -1,5 +1,3 @@
-
-
 import { useEffect, useState } from "react";
 import type { ChangeEvent, SubmitEvent } from "react";
 import { useLocation, useSearchParams } from "react-router-dom";
@@ -66,7 +64,7 @@ export default function AirgatePaymentForm({
     const paymentData: PaymentData = {
       amount: Number(formData.amountToPay),
       currency: "NGN",
-      callback_url: "https://uat.airgate.ng/demo",
+      callback_url: "https://airgate-checkout-demo.vercel.app/",
       user: {
         name: formData.name,
         email: formData.email,
@@ -93,7 +91,7 @@ export default function AirgatePaymentForm({
   };
 
   useEffect(() => {
-    if (location.pathname === "/demo") {
+    if (location.pathname === "/") {
       const status = searchParams.get("status");
 
       if (status === "successful") {
