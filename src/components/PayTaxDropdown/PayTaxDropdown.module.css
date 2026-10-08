@@ -1,0 +1,88 @@
+.dropdownContainer {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdownTrigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  background-color: #ffffff;
+  color: #15803d;
+  border: 1px solid #16a34a;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.dropdownTrigger:hover,
+.dropdownTrigger:focus-visible {
+  background-color: #f0fdf4;
+  outline: 2px solid #16a34a;
+  outline-offset: 2px;
+}
+
+.arrow {
+  font-size: 12px;
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 4px;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  min-width: 180px;
+  list-style: none;
+  padding: 4px 0;
+  z-index: 50;
+}
+
+.dropdownItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px 14px;
+  border: none;
+  background: none;
+  text-align: left;
+  font-size: 14px;
+  color: #1f2937;
+  cursor: pointer;
+}
+
+.dropdownItem:hover,
+.dropdownItem:focus-visible {
+  background-color: #f3f4f6;
+  outline: none;
+}
+
+.logoPlaceholder {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #0284c7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.placeholderBadge {
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.providerName {
+  font-weight: 600;
+}

@@ -1,0 +1,78 @@
+.header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  z-index: 40;
+}
+
+.navContainer {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.logoSection {
+  display: flex;
+  align-items: center;
+}
+
+.esirsBadge {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #15803d;
+  border: 3px solid #86efac;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.badgeText {
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 11px;
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.navLinks a {
+  text-decoration: none;
+  color: #374151;
+  font-size: 13px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.navLinks a:hover,
+.navLinks a:focus-visible {
+  color: #16a34a;
+}
+
+.activeLink {
+  color: #16a34a !important;
+  font-weight: 600 !important;
+}
+
+.navRight {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 1024px) {
+  .navLinks {
+    display: none; /* Can be toggled with a mobile menu drawer if needed */
+  }
+}

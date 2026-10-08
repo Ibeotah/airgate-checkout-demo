@@ -1,0 +1,137 @@
+
+.pageContainer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  min-height: 100vh;
+  background-color: var(--light-grey-00, #f3f4f6);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.formCard {
+  width: 100%;
+  max-width: 920px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  margin: 0 16px;
+  overflow: hidden;
+}
+
+.formHeader {
+  background-color: #1a233a;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.backButton {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 2px 6px;
+}
+
+.radioGroup {
+  padding: 20px 24px 10px;
+  display: flex;
+  gap: 24px;
+}
+
+.radioLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.formBody {
+  padding: 10px 24px 24px;
+}
+
+.formGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: end; /* Fixes alignment: aligns inputs/selects across the bottom edge of each row */
+}
+
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.fieldGroup label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #4b5563;
+  line-height: 1.4;
+}
+
+.fieldGroup input,
+.fieldGroup select {
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #111827;
+  background-color: #ffffff;
+  outline: none;
+  transition: border-color 0.2s;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.fieldGroup input:focus,
+.fieldGroup select:focus {
+  border-color: #3b82f6;
+}
+
+.submitBtn {
+  width: 100%;
+  margin-top: 24px;
+  background-color: #5b9bd5;
+  color: #ffffff;
+  border: none;
+  padding: 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.emptySlot {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .formRow {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .emptySlot {
+    display: none;
+  }
+
+  .radioGroup {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
