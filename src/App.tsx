@@ -1,22 +1,22 @@
-import  { useState } from 'react';
-import TopAnnouncementBar from './components/TopAnnouncementBar/TopAnnouncementBar';
-import Navbar from './components/Navbar/Navbar';
-import NewsTicker from './components/NewsTicker/NewsTicker';
-import HeroSection from './components/HeroSection/HeroSection';
-import AirgatePaymentForm from './components/AirgatePaymentForm/AirgatePaymentForm';
+import { useNavigate, useLocation } from "react-router-dom";
+import TopAnnouncementBar from "./components/TopAnnouncementBar/TopAnnouncementBar";
+import Navbar from "./components/Navbar/Navbar";
+import NewsTicker from "./components/NewsTicker/NewsTicker";
+import HeroSection from "./components/HeroSection/HeroSection";
+import AirgatePaymentForm from "./components/AirgatePaymentForm/AirgatePaymentForm";
 
 export default function App() {
-  const [currentPath, setCurrentPath] = useState('/');
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const handleNavigate = (path: string) => {
-    setCurrentPath(path);
-    window.history.pushState({}, '', path);
+    navigate(path);
   };
 
   return (
     <div>
-      {currentPath === '/pay/airgate' ? (
-        <AirgatePaymentForm onBack={() => handleNavigate('/')} />
+      {location.pathname === "/pay/airgate" ? (
+        <AirgatePaymentForm onBack={() => handleNavigate("/")} />
       ) : (
         <>
           <TopAnnouncementBar />
