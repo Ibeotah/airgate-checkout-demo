@@ -64,7 +64,8 @@ export default function AirgatePaymentForm({
     const paymentData: PaymentData = {
       amount: Number(formData.amountToPay),
       currency: "NGN",
-      callback_url: "https://airgate-checkout-demo.vercel.app/",
+      // callback_url: "https://airgate-checkout-demo.vercel.app/",
+       callback_url: "https://uat.airgate.ng/demo",
       user: {
         name: formData.name,
         email: formData.email,
